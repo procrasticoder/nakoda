@@ -1,0 +1,309 @@
+.moving-header{
+    position: relative;
+    height: 100vh;
+    max-height: 60vw;
+    /* width: 100%; */
+    display: flex;
+
+} 
+.mh-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background: url("https://ucpcdn.thyssenkrupp.com/_legacy/UCPthyssenkruppBAIS/assets.files/media/media-libary/thyssenkrupp-polymer-plants_image_w2000_h670.jpg"); */
+    background: url("https://www.wsp.com/-/media/Sector/Global/Image/bnr-Chemical_Industry-Banner.jpg?h=750&w=1920&hash=37751EF6F080BF289C582975C5EDEFF302526B0E");
+    
+    background-size: 100% 100%;
+    z-index: -2;
+}
+.mh-foreground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 29 46);
+    z-index: -1;
+    opacity: 0.75;
+}
+
+.mh-left{
+    width: 40%;
+    height: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mh-right{
+    width: 60%;
+    height: 90%;
+    margin-top: 50px;
+    color: white;
+    /* background-color: teal; */
+}
+.grid-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.grid{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    display: none;
+    width: 70%;
+    height: fit-content;
+    max-height: 10vw;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 10px;
+}
+@keyframes going{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes coming{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.grid-item{
+    width: 100%;
+    height: 200px;
+    /* height: 14vw; */
+    background-color: rgba(32, 32, 32, 0.8);
+    border-radius: 5px;
+}
+.grid-item img{
+   
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   /* box-shadow: 0px 0px 2px 2px #fff; */
+    /* object-fit: contain; */
+}
+.fab{
+    font-size: larger;
+}
+
+/* com prof */
+.company-profile{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 18rem;
+    box-shadow: 0px 0px 5px 2px black;
+}
+.card-body .btn{
+    color: #fff;
+    background-color: #ff6c00;
+    border-color: #ff6c00;
+}
+.card-body .btn:hover{
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.card-img-top{
+    height: 190px;
+}
+.card-body h5{
+    color: #014c86;
+}
+
+/* quote section */
+.quote-section{
+    height: 35vw;
+    width: 100%;
+    position: relative;
+}
+
+.quote-section h1{
+    font-size: 4.5rem;
+    margin-left: 4rem;
+}
+
+.quote-section img{
+    filter: blur(2px);
+}
+.quote-foreground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    
+}
+
+/* product section */
+.product-section{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.product-section>.card:hover .card-body{
+    background-color: #0d6efd;
+}
+.product-section>.card:hover .card-title{
+    color: #fff;
+}
+.product-section .card-body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ff6c00; */
+    
+}
+
+.product-section .card-title{
+    width: fit-content;
+    text-align: center;
+    color: #ff6c00;
+    cursor: default;
+}
+.product-btn{
+    background-color: #ff6c00 ;
+    border: #ff6c00;
+    display: block;
+    width: fit-content;
+    margin: auto;
+
+}
+.map-section{
+    height: fit-content;
+    width: 100%;
+}
+
+
+@media screen and (max-width:480px) {
+    
+    .moving-header{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        /* display: none; */
+        position: relative;
+        height: 60vh;
+        max-height: 100vh;
+    }
+
+    .mh-left{
+        width: 100%;
+        height: 50%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    .mh-right{
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        color: white;
+        /* background-color: teal; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* background-color: red; */
+    }
+    .grid{
+        position: absolute;
+        top: 0;
+        display: grid;
+        width: 70%;
+        height: 20vh;
+        max-height: 20vh;
+        /* background-color: red; */
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 10px;
+    }
+    .grid-item{
+        width: 100%;
+        height: 125px;
+        /* height: 14vw; */
+        background-color: rgba(32, 32, 32, 0.8);
+        border-radius: 5px;
+    }
+
+    .company-profile{
+        display: flex;
+        /* display: none; */
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card{
+        width: 80%;
+    }
+
+    .card:nth-child(2){
+    margin: 40px auto;    
+    }
+
+    .quote-section{
+        /* display: none; */
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        
+        /* background-color: teal; */
+    }
+
+    .quote-section h1{
+        font-size: 2rem;
+        margin-left: 1.5rem;
+
+    }
+
+    .product-section{
+        display: flex;
+        flex-direction: column;
+        /* display: none; */
+        height: fit-content;
+        width: 100%;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
